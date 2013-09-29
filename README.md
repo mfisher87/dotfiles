@@ -1,4 +1,5 @@
 .config-all
 ===========
 
-Store as many config files as possible
+Storing as much config data on github as possible.
+
