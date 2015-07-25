@@ -12,7 +12,7 @@ export PATH=$PATH:/home/mfisher/.gem/ruby/2.1.0/bin
 export LC_ALL="C"
 
 # Aliases
-alias ls='ls --color=auto'
+alias ls='ls --group-directories-first -h --color=auto'
 
 # Variables
 export web_dir='/srv/http'
