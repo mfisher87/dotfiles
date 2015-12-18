@@ -6,6 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Configuration
+export TERM=linux
 PS1='[\u@\h \W]\$ '
 set -o vi
 export PATH=$PATH:/home/mfisher/.gem/ruby/2.1.0/bin
