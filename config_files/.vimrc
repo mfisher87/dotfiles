@@ -33,4 +33,7 @@ set noexpandtab
 " display tabs as tabs instead of dot-space
 "set nolist
 
+" Allow arbitrary backspacing
+set backspace=indent,eol,start
+
 filetype indent plugin on
