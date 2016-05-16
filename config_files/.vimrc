@@ -36,4 +36,7 @@ set noexpandtab
 " Allow arbitrary backspacing
 set backspace=indent,eol,start
 
+" Highlight matching search terms
+set hlsearch
+
 filetype indent plugin on
