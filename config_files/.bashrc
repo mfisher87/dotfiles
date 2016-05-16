@@ -6,14 +6,18 @@
 [[ $- != *i* ]] && return
 
 # Configuration
-export TERM=linux
+if [[ $TERM == "xterm" ]]; then
+	export TERM="xterm-256color"
+fi
 PS1='[\u@\h \W]\$ '
 set -o vi
-export PATH=$PATH:/home/mfisher/.gem/ruby/2.1.0/bin
+export GREP_OPTIONS='--color=always'
+export GREP_COLOR='1;35;40'
 export LC_ALL="C"
 
 # Aliases
 alias ls='ls --group-directories-first -h --color=auto'
+alias tmux='TERM=screen-256color-bce tmux'
 
 # Variables
 export web_dir='/srv/http'
