@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+mv_dot() {
+    mv "${1}" ".${1}"
+}
+
+mv_bkp() {
+    mv "${1}" "${1}.bkp"
+}

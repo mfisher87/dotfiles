@@ -1,34 +1,31 @@
-#!/bin/bash
+#!/usr/bin/env bash
 bkp_dir="$HOME/.cfg-bkp"
+if [ -n "$1" ]; then
+	destination="$1"
+else
+	destination="$HOME"
+fi
 
-# Loop over config files in the repo
-for file in $( ls -a "$PWD/config_files" )
-do
-	source="$PWD/config_files/$file"
-	filename=$( basename "$source" )
-	target="$HOME/$filename"
+echo "Syncing config files to $destination"
 
-	# Ignore current and parent directory
-	if [ "$filename" != "." -a "$filename" != ".." ]
-	then
-		# If symlink already exists, we "continue" the loop, or recreate it.
-		# Re-creating is safer.
-		if [ -h "$target" ]
-		then
-			echo "Removed pre-existing symbolic link at $target"
-			rm "$target"
-		# If there's a pre-existing normal config file, back it up safely.
-		elif [ -e "$target" ]
-		then
-			if [ ! -d "$bkp_dir" ]
-			then
-				mkdir "$bkp_dir"
-			fi
-			echo "$target already exists as a normal file. Copied to $bkp_dir"
-			mv "$target" "$bkp_dir"
-		fi
+cd "$(dirname "${BASH_SOURCE}")/config_files"
 
-		# Finally create symbolic link
-		ln -s "$source" "$HOME"
+git pull origin master
+
+function sync() {
+	rsync -avh --no-perms --backup-dir=$bkp_dir . "$destination";
+	source ~/.bash_profile
+}
+
+if [ "$1" == "-f" ]; then
+	sync
+else
+	read -p 'This will overwrite conflicting files in your home directory. Continue? (y/n)' -n 1
+	echo ''
+	if [[ $REPLY =~ ^[Yy]$ ]]; then
+		sync
 	fi
-done
+fi
+unset sync
+
+cd ..

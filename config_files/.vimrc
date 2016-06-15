@@ -40,3 +40,7 @@ set backspace=indent,eol,start
 set hlsearch
 
 filetype indent plugin on
+
+" Show relative line numbers and absolute line number for current line
+set number
+set relativenumber
