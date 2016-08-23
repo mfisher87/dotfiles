@@ -12,6 +12,7 @@
 [alias]
 	lol = log --graph --decorate --oneline
 	lola = log --graph --decorate --oneline --all
+	root = rev-parse --show-toplevel
 [push]
 	default = simple
 
