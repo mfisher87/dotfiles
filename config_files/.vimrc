@@ -27,9 +27,7 @@ set tabstop=2
 set shiftwidth=2
 
 " use spaces instead of tabs
-"set expandtab
-" use tabs instead of spaces
-set noexpandtab
+set expandtab
 " display tabs as tabs instead of dot-space
 "set nolist
 
