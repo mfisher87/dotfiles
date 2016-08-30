@@ -34,6 +34,9 @@ set expandtab
 " Allow arbitrary backspacing
 set backspace=indent,eol,start
 
+" Overwrite instead of rename files
+set backupcopy=yes
+
 " Highlight matching search terms
 set hlsearch
 
