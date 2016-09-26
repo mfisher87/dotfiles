@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+docker-shell () {
+    if test -z $1; then
+        echo "Provide a docker image name as an argument.";
+        return;
+    fi;
+    docker exec -it $1 "/bin/bash";
+}
+
 mv_dot() {
     mv "${1}" ".${1}"
 }
