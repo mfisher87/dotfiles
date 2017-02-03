@@ -11,3 +11,4 @@ fi
 # Customized commands
 alias ls="ls --group-directories-first -hF ${colorflag}"
 alias tmux='TERM=screen-256color-bce tmux'
+alias grep='grep --color=auto'
