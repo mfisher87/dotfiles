@@ -12,3 +12,4 @@ fi
 alias ls="ls --group-directories-first -hF ${colorflag}"
 alias tmux='TERM=screen-256color-bce tmux'
 alias grep='grep --color=auto'
+alias sshp='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
