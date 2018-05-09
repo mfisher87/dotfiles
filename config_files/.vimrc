@@ -45,3 +45,10 @@ filetype indent plugin on
 " Show relative line numbers and absolute line number for current line
 set number
 set relativenumber
+
+" Plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'leafgarland/typescript-vim'
+
+call plug#end()
