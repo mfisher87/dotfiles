@@ -5,7 +5,7 @@ Store config data on github, and allow user to apply config files to their own e
 
 Usage
 -----
-* Clone this repo (or your fork of this repo)
+* Clone this repo
 * `source apply_config.sh`. An optional positional argument will rsync the config files to an alternate directory (absolute path).
 
 To-do
