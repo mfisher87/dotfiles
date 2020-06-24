@@ -4,9 +4,9 @@
 # of this script. For example, if you want to see CPU load only when you login,
 # not for subshells, add it here.
 #
-# This file is NOT read first by bash; if ~/.bash_profile profile or
-# ~/.bash_login also exist, they will be prioritized. For this to work, please
-# ensure neither of those files exist. For more information:
+# This file is NOT read first by bash; if ~/.bash_profile or ~/.bash_login also
+# exist, they will be prioritized. For this to work, please ensure neither of
+# those files exist. For more information:
 #
 # https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html
 
