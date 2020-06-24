@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+# ~/.bash_exports
 
 export EDITOR='vim'
 
@@ -11,9 +11,9 @@ fi
 export HISTSIZE='32768'
 export HISTFILESIZE="$HISTSIZE"
 # Exclude duplicates and leading-space commands from history
+# See bash(1) for more options
 export HISTCONTROL='ignoreboth'
 
-export LANG='C.UTF-8'
-export LC_ALL='C.UTF-8'
+export LANG='en-US.UTF-8'
 
 export GREP_COLOR='1;35;40'
