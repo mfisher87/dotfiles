@@ -50,5 +50,15 @@ set relativenumber
 call plug#begin('~/.vim/plugged')
 
 Plug 'leafgarland/typescript-vim'
+Plug 'elmcast/elm-vim'
+Plug 'rodjek/vim-puppet'
+" Difficult to use...
+Plug 'terryma/vim-multiple-cursors'
+" Allows commenting with `gc`/`gcc`
+Plug 'tpope/vim-commentary'
+" Allows opening file browser with `-` key
+Plug 'tpope/vim-vinegar'
+" Manages ctags (for code-aware navigation)
+Plug 'ludovicchabant/vim-gutentags'
 
 call plug#end()
