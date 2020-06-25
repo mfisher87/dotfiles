@@ -14,6 +14,6 @@ export HISTFILESIZE="$HISTSIZE"
 # See bash(1) for more options
 export HISTCONTROL='ignoreboth'
 
-export LANG='en-US.UTF-8'
+export LANG='en_US.UTF-8'
 
 export GREP_COLOR='1;35;40'
