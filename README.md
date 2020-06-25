@@ -18,6 +18,8 @@ To-do
 -----
 * Accept input from user for name, email. Replace config file data with user input.
 * Add lots more config files...
+* Differentiate filenames for better autocompletion: `config_files`,
+  `config.yml`, `dotdrop/`, `dotdrop.sh`
 
 Probably won't do
 -----------------
