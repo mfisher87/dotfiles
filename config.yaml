@@ -1,0 +1,47 @@
+config:
+  backup: true
+  create: false  # Don't create directory structure if it's not already there
+  dotpath: config_files
+
+dotfiles:
+  f_profile:
+    dst: ~/.profile
+    src: .profile
+  f_bash_aliases:
+    dst: ~/.bash_aliases
+    src: .bash_aliases
+  f_bash_exports:
+    dst: ~/.bash_exports
+    src: .bash_exports
+  f_bash_funcs:
+    dst: ~/.bash_funcs
+    src: .bash_funcs
+  f_bash_path:
+    dst: ~/.bash_path
+    src: .bash_path
+  f_bash_prompt:
+    dst: ~/.bash_prompt
+    src: .bash_prompt
+  f_bashrc:
+    dst: ~/.bashrc
+    src: .bashrc
+  f_gitconfig:
+    dst: ~/.gitconfig
+    src: .gitconfig
+  f_tmux:
+    dst: ~/.tmux.conf
+    src: .tmux.conf
+  f_vimrc:
+    dst: ~/.vimrc
+    src: .vimrc
+  d_vim:
+    dst: ~/.vim
+    src: .vim
+  d_config:
+    dst: ~/.config
+    src: .config
+
+profiles:
+  default:
+    dotfiles:
+      - ALL

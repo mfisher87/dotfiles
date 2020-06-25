@@ -1,12 +1,18 @@
 .config-all
 ===========
 
-Store config data on github, and allow user to apply config files to their own environment quickly and easily.
+Store config data on github, and allow user to apply config files to their own
+environment quickly and easily.
 
 Usage
 -----
-* Clone this repo
-* `source apply_config.sh`. An optional positional argument will rsync the config files to an alternate directory (absolute path).
+* Clone this repo and subrepo(s)
+* `make setup`
+* `./dotdrop.sh compare --profile=default` to show differences between repo and
+  installed config
+* `./dotdrop.sh import ~/.foo` to import a new config file `~/.foo`
+* `./dotdrop.sh install --profile=default` to install dotfiles. Your old ones
+  will be backed up!
 
 To-do
 -----
