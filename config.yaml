@@ -1,7 +1,8 @@
 config:
   backup: true
-  create: false  # Don't create directory structure if it's not already there
+  create: true
   dotpath: config_files
+  link_dotfile_default: link
 
 dotfiles:
   f_profile:
@@ -37,9 +38,9 @@ dotfiles:
   d_vim:
     dst: ~/.vim
     src: .vim
-  d_config:
-    dst: ~/.config
-    src: .config
+  d_regolith:
+    dst: ~/.config/regolith
+    src: .config/regolith
 
 profiles:
   default:
