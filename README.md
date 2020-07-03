@@ -6,8 +6,11 @@ environment quickly and easily.
 
 Usage
 -----
+
+* Ensure python3 is installed and accessible as `python`
 * Clone this repo and subrepo(s)
 * `make setup`
+* `. env/bin/activate`
 * `./dotdrop.sh compare --profile=default` to show differences between repo and
   installed config
 * `./dotdrop.sh import ~/.foo` to import a new config file `~/.foo`
