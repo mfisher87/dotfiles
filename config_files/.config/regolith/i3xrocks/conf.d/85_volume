@@ -1,2 +1,5 @@
+# Volume
+# 
+# Mouse wheel to raise/lower, right-click to toggle mute
 [volume]
 interval=5
