@@ -480,7 +480,7 @@ set_from_resource $i3-wm.bar.trayoutput i3-wm.bar.trayoutput none
 set_from_resource $i3-wm.bar.stripworkspacenumbers i3-wm.bar.stripworkspacenumbers yes
 
 # i3xrocks config file. Override this for custom status indicators on the bar.
-set_from_resource $i3-wm.bar.status_command i3-wm.bar.status_command i3xrocks -u ~/.config/regolith/i3xrocks/conf.d -d /etc/regolith/i3xrocks/conf.d
+set_from_resource $i3-wm.bar.status_command i3-wm.bar.status_command i3xrocks -u ~/.config/regolith/i3xrocks/conf.d #  -d /etc/regolith/i3xrocks/conf.d
 
 # The bar configuration
 bar {
@@ -534,11 +534,14 @@ exec --no-startup-id $i3-wm.program.2
 set_from_resource $i3-wm.program.3 i3-wm.program.3 :
 exec --no-startup-id $i3-wm.program.3
 
-# Custom config
+#################
+# Custom config #
+#################
+
+# switch back and forth by pressing same workspace keys
 workspace_auto_back_and_forth yes
 
 # Custom assignments
 assign [class="Firefox"] → workspace number 2 $ws2
 assign [class="Slack"] → workspace number 4 $ws4
 assign [class="Steam"] → workspace number 10 $ws10
-
