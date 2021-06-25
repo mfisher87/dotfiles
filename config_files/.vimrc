@@ -60,5 +60,10 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-vinegar'
 " Manages ctags (for code-aware navigation)
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'FooSoft/vim-argwrap'
 
 call plug#end()
+
+" argwrap config
+nnoremap <silent> <leader>a :ArgWrap<CR>
+let g:argwrap_tail_comma = 1
