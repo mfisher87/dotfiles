@@ -50,8 +50,10 @@ set relativenumber
 call plug#begin('~/.vim/plugged')
 
 Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'elmcast/elm-vim'
 Plug 'rodjek/vim-puppet'
+Plug 'google/vim-jsonnet'
 " Difficult to use...
 Plug 'terryma/vim-multiple-cursors'
 " Allows commenting with `gc`/`gcc`
@@ -60,6 +62,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-vinegar'
 " Manages ctags (for code-aware navigation)
 Plug 'ludovicchabant/vim-gutentags'
+" Handles changing between single-line and multi-line list/argument formats
 Plug 'FooSoft/vim-argwrap'
 
 call plug#end()
