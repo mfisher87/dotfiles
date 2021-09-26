@@ -8,7 +8,9 @@ Usage
 -----
 
 * Ensure python3 is installed and accessible as `python`
-* Clone this repo and subrepo(s)
+* Clone this repo and subrepo(s) either:
+  * At clone time: `git clone --recurse-submodules --remote-submodules`, OR
+  * After clone: `git submodule update --init`
 * `make setup`
 * `. env/bin/activate`
 * `./dotdrop.sh compare --profile=default` to show differences between repo and
