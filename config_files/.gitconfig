@@ -1,18 +1,25 @@
 [user]
 	email = XXXXXXXXX
 	name = Matt Fisher
+
+
 [core]
 	editor = vim
 	autocrlf = input
 	whitespace = cr-at-eol
 [color]
 	ui = true
+
+
+[init]
+  defaultBranch = main
 [merge]
 	conflictstyle = merge
+[push]
+	default = simple
+
+
 [alias]
 	lol = log --graph --decorate --oneline
 	lola = log --graph --decorate --oneline --all
 	root = rev-parse --show-toplevel
-[push]
-	default = simple
-

@@ -4,8 +4,12 @@ i3-vm.bar.status_command: i3xrocks -d ~/.config/regolith/i3xrocks/conf.d
 ## Turn on applet tray
 i3-wm.bar.trayoutput: primary
 
+## Set date format
+i3xrocks.date.format2: %a %Y-%m-%d %H:%M
+
 ## Start applets
 i3-wm.program.1: /usr/bin/nm-applet
+i3-wm.program.2: /usr/bin/caffeine-indicator
 
 ## Set date format
 i3xrocks.date.format2: + %a %Y.%m.%d %H:%M
