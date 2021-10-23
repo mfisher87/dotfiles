@@ -15,4 +15,6 @@
 	root = rev-parse --show-toplevel
 [push]
 	default = simple
+[pull]
+  ff = only
 
