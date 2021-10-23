@@ -17,6 +17,8 @@
 	conflictstyle = merge
 [push]
 	default = simple
+[pull]
+  ff = only
 
 
 [alias]
