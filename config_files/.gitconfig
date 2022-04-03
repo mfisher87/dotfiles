@@ -1,27 +1,28 @@
 [user]
-	email = XXXXXXXXX
-	name = Matt Fisher
+  email = XXXXXXXXX 
+  name = Matt Fisher
 
 
 [core]
-	editor = vim
-	autocrlf = input
-	whitespace = cr-at-eol
+  editor = vim
+  autocrlf = input
+  whitespace = cr-at-eol
+  excludesfile = ~/.gitignore_local
 [color]
-	ui = true
+  ui = true
 
 
 [init]
   defaultBranch = main
 [merge]
-	conflictstyle = merge
+  conflictstyle = merge
 [push]
-	default = simple
+  default = simple
 [pull]
   ff = only
 
 
 [alias]
-	lol = log --graph --decorate --oneline
-	lola = log --graph --decorate --oneline --all
-	root = rev-parse --show-toplevel
+  lol = log --graph --decorate --oneline
+  lola = log --graph --decorate --oneline --all
+  root = rev-parse --show-toplevel
