@@ -1,1 +1,1 @@
-setlocal formatoptions+=a
+" setlocal formatoptions+=a
