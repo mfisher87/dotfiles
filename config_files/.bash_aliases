@@ -28,5 +28,5 @@ alias fixsshagent='eval $(tmux showenv -s SSH_AUTH_SOCK)'  # What was this for?
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Play a tone based on $1, e.g. `play E3`
+# Play a tone based on $1, e.g. `note E3`
 alias note='play -qn synth 2 sine'
