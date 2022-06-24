@@ -70,3 +70,6 @@ call plug#end()
 " argwrap config
 nnoremap <silent> <leader>a :ArgWrap<CR>
 let g:argwrap_tail_comma = 1
+
+" Bash-like tab completion
+set wildmode=longest,list
