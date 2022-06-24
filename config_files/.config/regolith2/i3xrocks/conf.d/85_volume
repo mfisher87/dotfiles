@@ -1,0 +1,7 @@
+# Volume
+# 
+# Mouse wheel to raise/lower, right-click to toggle mute
+# Requires `/usr/share/i3xrocks/volume`. Contents from:
+#     https://github.com/regolith-linux/regolith-i3xrocks-config/tree/master/scripts
+[volume]
+interval=5

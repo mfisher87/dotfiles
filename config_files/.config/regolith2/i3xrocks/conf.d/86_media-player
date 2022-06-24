@@ -1,0 +1,6 @@
+# Media Player
+# 
+# Requires /usr/share/i3xrocks/media-player from:
+#   https://raw.githubusercontent.com/regolith-linux/regolith-i3xrocks-config/master/scripts/media-player 
+[media-player]
+interval=15

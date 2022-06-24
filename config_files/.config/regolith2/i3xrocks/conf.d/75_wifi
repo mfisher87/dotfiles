@@ -1,0 +1,4 @@
+# Requires `/usr/share/i3xrocks/wifi`. Contents from:
+#     https://github.com/regolith-linux/regolith-i3xrocks-config/tree/master/scripts
+# [wifi]
+# interval=10
