@@ -81,9 +81,13 @@ bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser
 
 set_from_resource $rofiTheme rofi.theme /etc/regolith/styles/lascaille/rofi.rasi
 
-## Launch // Application // <> Space ##
-set_from_resource $i3-wm.program.launcher.app i3-wm.program.launcher.app rofi -show drun -theme $rofiTheme
-bindsym $mod+space exec $i3-wm.program.launcher.app
+# ## Launch // Application Launch // <> Space ##
+# set_from_resource $i3-wm.program.launcher.app i3-wm.program.launcher.app rofi -show drun -drun-match-fields name -theme $rofiTheme
+# bindsym $mod+space exec $i3-wm.program.launcher.app
+
+## Launch // Application Search // <><Shift> Space ##
+set_from_resource $i3-wm.program.launcher.appsearch i3-wm.program.launcher.app rofi -show drun -sort -sorting-method fzf -theme $rofiTheme
+bindsym $mod+space exec $i3-wm.program.launcher.appsearch
 
 ## Launch // Command // <><Shift> Space ##
 set_from_resource $i3-wm.program.launcher.cmd i3-wm.program.launcher.cmd rofi -show run -theme $rofiTheme
@@ -366,6 +370,18 @@ mode "Resize Mode" {
         bindsym Shift+j resize shrink height 12 px or 12 ppt
         bindsym Shift+l resize grow width 12 px or 12 ppt
 
+
+        # DEFAULT CONFIG:
+        # bindsym $i3-wm.binding.left resize shrink width 6 px or 6 ppt
+        # bindsym $i3-wm.binding.up resize grow height 6 px or 6 ppt
+        # bindsym $i3-wm.binding.down resize shrink height 6 px or 6 ppt
+        # bindsym $i3-wm.binding.right resize grow width 6 px or 6 ppt
+
+        # bindsym $i3-wm.binding.move_left resize shrink width 12 px or 12 ppt
+        # bindsym $i3-wm.binding.move_up resize grow height 12 px or 12 ppt
+        # bindsym $i3-wm.binding.move_down resize shrink height 12 px or 12 ppt
+        # bindsym $i3-wm.binding.move_right resize grow width 12 px or 12 ppt
+
         ## Resize // Window Gaps // + - ##
         bindsym minus gaps inner current minus 6
         bindsym plus gaps inner current plus 6
@@ -377,7 +393,8 @@ mode "Resize Mode" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-bindsym $mod+r mode "Resize Mode"
+set_from_resource $i3-wm.binding.resize_mode i3-wm.binding.resize_mode r
+bindsym $mod+$i3-wm.binding.resize_mode mode "Resize Mode"
 
 ###############################################################################
 # i3 Appearance and Behavior
@@ -534,6 +551,7 @@ exec --no-startup-id $i3-wm.program.2
 set_from_resource $i3-wm.program.3 i3-wm.program.3 :
 exec --no-startup-id $i3-wm.program.3
 
+
 #################
 # Custom config #
 #################
@@ -548,9 +566,18 @@ bindsym $mod+x debuglog toggle; shmlog toggle
 bindsym $mod+comma move workspace to output left
 bindsym $mod+period move workspace to output right
 
+# ensure picom is running, press this when you see screen-tearing
+bindsym $mod+p exec notify-send -a picom "$(picom-ensure)"
+
 # Custom workspace program assignments
 assign [class="Firefox"] → workspace number 2 $ws2
 assign [class="Slack"] → workspace number 4 $ws4
 assign [class="Spotify*"] → workspace number 6 $ws6
 assign [class="Zoom*"] → workspace number 7 $ws7
 assign [class="Steam"] → workspace number 10 $ws10
+
+# TEMPORARY: Until can upgrade to regolith 2.0 and fix gnome integration...
+# Pulse Audio controls
+# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
+# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% #decrease sound volume
+# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
