@@ -20,6 +20,8 @@ alias codegrep='grep -R --exclude-dir=".git" --exclude="*.log"'  # grep for code
 alias sshp='ssh -o PreferredAuthentications=password,keyboard-interactive -o PubkeyAuthentication=no'
 alias fixsshagent='eval $(tmux showenv -s SSH_AUTH_SOCK)'  # What was this for?
 
+alias nginxcontainer='docker run --rm -p 80:80 -v ${PWD}:/var/lib/nginx/html:ro dceoy/nginx-autoindex'
+
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
@@ -30,3 +32,12 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # Play a tone based on $1, e.g. `note E3`
 alias note='play -qn synth 2 sine'
+
+# Parse puppetry in ./puppet
+alias puppetparse='docker run --volume $PWD/puppet/:/etc/puppetlabs/code/ --entrypoint=puppet puppet/puppetserver:6.14.1 parser validate /etc/puppetlabs/code/site.pp'
+
+# ¯\_(ツ)_/¯
+alias shrug='echo "¯\_(ツ)_/¯"'
+
+# Rsync with vagrant identity
+alias vrsync='rsync -e "ssh -i $HOME/.ssh/id_rsa_vagrant_vsphere"'

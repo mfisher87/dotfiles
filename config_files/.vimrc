@@ -49,11 +49,14 @@ set relativenumber
 " Plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'vim-scripts/indentpython.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'pangloss/vim-javascript'
 Plug 'elmcast/elm-vim'
 Plug 'rodjek/vim-puppet'
 Plug 'google/vim-jsonnet'
+Plug 'jjo/vim-cue'
 " Difficult to use...
 Plug 'terryma/vim-multiple-cursors'
 " Allows commenting with `gc`/`gcc`
@@ -64,6 +67,12 @@ Plug 'tpope/vim-vinegar'
 Plug 'ludovicchabant/vim-gutentags'
 " Handles changing between single-line and multi-line list/argument formats
 Plug 'FooSoft/vim-argwrap'
+" Jinja2 highlighting
+Plug 'Glench/Vim-Jinja2-Syntax'
+" Markdown
+Plug 'plasticboy/vim-markdown'
+" Indentation guides
+Plug 'nathanaelkane/vim-indent-guides'
 
 call plug#end()
 
@@ -71,5 +80,17 @@ call plug#end()
 nnoremap <silent> <leader>a :ArgWrap<CR>
 let g:argwrap_tail_comma = 1
 
+
 " Bash-like tab completion
 set wildmode=longest,list
+
+" jsonnet config
+let g:jsonnet_fmt_options="-n 4"
+
+" vim-indent-guides config:
+" Enable indentation guides by default
+let g:indent_guides_enable_on_vim_startup = 1
+" Custom colors
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=235
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=236

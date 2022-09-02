@@ -94,7 +94,7 @@ set_from_resource $i3-wm.program.launcher.cmd i3-wm.program.launcher.cmd rofi -s
 bindsym $mod+Shift+space exec $i3-wm.program.launcher.cmd
 
 ## Navigate // Window by Name // <><Ctrl> Space ##
-set_from_resource $i3-wm.program.launcher.window i3-wm.program.launcher.window rofi -show window -theme $rofiTheme
+set_from_resource $i3-wm.program.launcher.window i3-wm.program.launcher.window rofi -show window -window-format "{t}" -theme $rofiTheme
 bindsym $mod+Ctrl+space exec $i3-wm.program.launcher.window
 
 ## Launch // This Dialog // <><Shift> ? ##
@@ -508,6 +508,9 @@ bar {
   tray_output $i3-wm.bar.trayoutput
   strip_workspace_numbers $i3-wm.bar.stripworkspacenumbers
 
+  wheel_up_cmd nop
+  wheel_down_cmd nop
+
   colors {
       background $i3-wm.bar.background.color
       statusline $i3-wm.bar.statusline.color
@@ -569,15 +572,22 @@ bindsym $mod+period move workspace to output right
 # ensure picom is running, press this when you see screen-tearing
 bindsym $mod+p exec notify-send -a picom "$(picom-ensure)"
 
-# Custom workspace program assignments
-assign [class="Firefox"] → workspace number 2 $ws2
-assign [class="Slack"] → workspace number 4 $ws4
-assign [class="Spotify*"] → workspace number 6 $ws6
-assign [class="Zoom*"] → workspace number 7 $ws7
-assign [class="Steam"] → workspace number 10 $ws10
+# focus parent container
+bindsym $mod+a focus parent
 
-# TEMPORARY: Until can upgrade to regolith 2.0 and fix gnome integration...
-# Pulse Audio controls
-# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
-# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% #decrease sound volume
-# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
+# change container/tab title
+bindsym $mod+t exec i3-msg title_format `zenity --title="i3-msg title_format" --text "Enter a container title" --entry`
+
+# kill zoom
+bindsym $mod+z exec pkill zoom
+
+# Custom workspace program assignments
+assign [class="firefox"] → workspace number 2 $ws2
+assign [class="Slack"] → workspace number 4 $ws4
+assign [class="zoom*"] → workspace number 7 $ws7
+assign [class="Steam"] → workspace number 10 $ws10
+#
+# Spotify doesn't set its class hints at startup; it makes a window first then
+# updates it. `for_window`, unlike `assign`, watches for changes then executes
+# the operation.
+for_window [class="Spotify"] move to workspace number 6 $ws6

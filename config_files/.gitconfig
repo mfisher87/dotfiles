@@ -2,27 +2,45 @@
   email = XXXXXXXXX 
   name = Matt Fisher
 
-
 [core]
   editor = vim
   autocrlf = input
   whitespace = cr-at-eol
   excludesfile = ~/.gitignore_local
+
 [color]
   ui = true
 
 
+[alias]
+  root = "rev-parse --show-toplevel"
+  new = "!git init && git symbolic-ref HEAD refs/heads/main"
+
+  ## Common typos:
+  puhs = "push"
+
+  ## Convenience:
+  # "Log list": shows tree format
+  lol = "log --graph --decorate --oneline"
+  # "Log list all"
+  lola = "log --graph --decorate --oneline --all"
+  cv = "commit --verbose"
+  po = "push -u origin"
+  pob = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
+  pb = "pob"
+  fm = "fetch origin main:main"
+
+
+# Command-specific settings:
 [init]
   defaultBranch = main
+
 [merge]
   conflictstyle = merge
+
 [push]
   default = simple
+
 [pull]
+  rebase = false
   ff = only
-
-
-[alias]
-  lol = log --graph --decorate --oneline
-  lola = log --graph --decorate --oneline --all
-  root = rev-parse --show-toplevel

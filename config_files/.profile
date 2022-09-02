@@ -21,3 +21,10 @@ if [ -n "$BASH_VERSION" ]; then
         . "$HOME/.bashrc"
     fi
 fi
+
+# Disable webcam auto-exposure that blows out images
+# if type v4l2-ctl >/dev/null 2>&1; then
+#     v4l2-ctl -c exposure_auto_priority=0
+# else
+#     echo "v4l2-ctl webcam configuration tool not installed."
+# fi
