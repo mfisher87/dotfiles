@@ -41,6 +41,9 @@ dotfiles:
   d_regolith:
     dst: ~/.config/regolith
     src: .config/regolith
+  d_regolith2:
+    dst: ~/.config/regolith2
+    src: .config/regolith2
 
 profiles:
   default:
