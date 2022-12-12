@@ -1,6 +1,6 @@
 
 ## Fix to use bar config from home dir
-# NOTE: Was `i3-vm` for a long time... woops
+## NOTE: Was `i3-vm` for a long time... woops
 i3-wm.bar.status_command: i3xrocks -d ~/.config/regolith2/i3xrocks/conf.d
 
 ## Turn on applet tray
@@ -40,13 +40,13 @@ i3-wm.workspace.17.name: 17
 i3-wm.workspace.18.name: 18
 i3-wm.workspace.19.name: 19
 
-# regolith.wallpaper.file: /usr/share/backgrounds/Blue_flower_by_Elena_Stravoravdi.jpg
+## regolith.wallpaper.file: /usr/share/backgrounds/Blue_flower_by_Elena_Stravoravdi.jpg
 
 !regolith.look.path: /usr/share/regolith-look/default
-!regolith.look.path: /usr/share/regolith-look/nord
+regolith.look.path: /usr/share/regolith-look/nord
 !regolith.look.path: /usr/share/regolith-look/blackhole
 !regolith.look.path: /usr/share/regolith-look/gruvbox
 !regolith.look.path: /usr/share/regolith-look/nevil
 !regolith.look.path: /usr/share/regolith-look/solarized-dark
 !regolith.look.path: /usr/share/regolith-look/nord
-regolith.look.path: /usr/share/regolith-look/nord-matt
+!regolith.look.path: /usr/share/regolith-look/nord-matt
