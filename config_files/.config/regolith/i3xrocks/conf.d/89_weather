@@ -1,4 +1,0 @@
-# Requires `/usr/share/i3xrocks/weather`. Contents from:
-#     https://github.com/regolith-linux/regolith-i3xrocks-config/tree/master/scripts
-[weather]
-interval=600

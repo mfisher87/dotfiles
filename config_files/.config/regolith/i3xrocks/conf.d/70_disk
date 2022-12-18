@@ -1,4 +1,0 @@
-# Requires `/usr/share/i3xrocks/disk-capacity`. Contents from:
-#     https://github.com/regolith-linux/regolith-i3xrocks-config/tree/master/scripts
-[disk-capacity]
-interval=10
