@@ -4,7 +4,7 @@
   signingkey = ~/.ssh/id_ed25519.pub
 
 [gpg]
-    format = ssh
+  format = ssh
 
 [core]
   editor = vim
