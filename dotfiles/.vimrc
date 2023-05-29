@@ -1,3 +1,4 @@
+set modeline
 set t_Co=256
 
 syntax on
@@ -73,6 +74,9 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'plasticboy/vim-markdown'
 " Indentation guides
 Plug 'nathanaelkane/vim-indent-guides'
+" Quarto syntax
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'quarto-dev/quarto-vim'
 
 call plug#end()
 
