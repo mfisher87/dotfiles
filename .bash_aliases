@@ -41,6 +41,8 @@ alias puppetparse='docker run --volume $PWD/puppet/:/etc/puppetlabs/code/ --entr
 
 # ¯\_(ツ)_/¯
 alias shrug='echo "¯\_(ツ)_/¯"'
+alias brown='play -n -n --combine merge synth brownnoise band -n 550 550 tremolo 50 1 vol -24dB reverb bass 10 treble -6'
 
 # Rsync with vagrant identity
 alias vrsync='rsync -e "ssh -i $HOME/.ssh/id_rsa_vagrant_vsphere"'
+alias vssh='ssh -i $HOME/.ssh/id_rsa_vagrant_vsphere'
