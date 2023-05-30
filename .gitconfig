@@ -10,29 +10,37 @@
   editor = vim
   autocrlf = input
   whitespace = cr-at-eol
-  excludesfile = ~/.gitignore_local
+  excludesfile = ~/.gitignore_global
 
 [color]
   ui = true
 
 
 [alias]
+  ## Helpers:
+  # Output the path of the root directory of this git repo:
   root = "rev-parse --show-toplevel"
+
+  # For older versions of git that don't support defaultBranch config:
   new = "!git init && git symbolic-ref HEAD refs/heads/main"
 
   ## Common typos:
   puhs = "push"
 
   ## Convenience:
+  ds = "diff --staged"
+  cv = "commit --verbose"
+  po = "push --set-upstream origin"
+  pob = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
+  pb = "pob"
+
+  fm = "fetch origin main:main"
+  sm = "switch main"
+
   # "Log list": shows tree format
   lol = "log --graph --decorate --oneline"
   # "Log list all"
   lola = "log --graph --decorate --oneline --all"
-  cv = "commit --verbose"
-  po = "push -u origin"
-  pob = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
-  pb = "pob"
-  fm = "fetch origin main:main"
 
 
 # Command-specific settings:
