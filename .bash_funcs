@@ -1,3 +1,4 @@
+#!/bin/bash
 # ~/.bash_funcs
 
 docker-shell () {
@@ -8,14 +9,19 @@ docker-shell () {
     docker exec -it "$1" "/bin/bash";
 }
 
-mv_dot() {
+docker-compose () {
+    echo "Use 'docker compose', dummy!"
+    return 1
+}
+
+mv_dot () {
     mv "${1}" ".${1}"
 }
 
-mv_bkp() {
+mv_bkp () {
     mv "${1}" "${1}.bkp"
 }
 
-gen_pw() {
-    cat /dev/urandom | tr -dc "\-_A-Za-z0-9" | head -c${1}
+gen_pw () {
+    cat /dev/urandom | tr -dc "\-_A-Za-z0-9" | head -c"${1}"
 }
