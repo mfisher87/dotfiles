@@ -45,7 +45,7 @@
   # I don't want to see here :) NOTE:
   #   * An `md-outputs*` branch is (an implementation detail?) generated for each PR
   #   * `--all` MUST be after `--exclude`s.
-  lolac = "git log --decorate --graph --oneline --exclude=refs/*/gh-pages --exclude=refs/*/md-outputs* --all"
+  lolac = "log --decorate --graph --oneline --exclude=refs/*/gh-pages --exclude=refs/*/md-outputs* --all"
 
 
 
