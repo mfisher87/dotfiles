@@ -41,6 +41,12 @@
   lol = "log --graph --decorate --oneline"
   # "Log list all"
   lola = "log --graph --decorate --oneline --all"
+  # "Log list all for Carpentries doc repos": These reposhave lots of branches
+  # I don't want to see here :) NOTE:
+  #   * An `md-outputs*` branch is (an implementation detail?) generated for each PR
+  #   * `--all` MUST be after `--exclude`s.
+  lolac = "git log --decorate --graph --oneline --exclude=refs/*/gh-pages --exclude=refs/*/md-outputs* --all"
+
 
 
 # Command-specific settings:
