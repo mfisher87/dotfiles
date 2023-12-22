@@ -5,3 +5,21 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+
+# This provides `diff-highlight` which is used in ~/.gitconfig.
+# `diff-highlight` is distributed with even some pre-2.0 versions of Git, so
+# you almost definitely already have it! It can just be hard to find and use.
+#
+# IMPORTANT: This path may not work on your system!!! I found it on
+# a 2022 Debian-based distro with: `dpkg -L git | grep diff-highlight`
+#     https://stackoverflow.com/a/55891251
+#
+# IMPORTANT: The software may not be "built" in this path!!! If you see
+# `diff-highlight.perl`, but not an executable `diff-highlight` script, you may
+# need to `sudo make` within $DIFFHIGHLIGHT_PATH. If you do see
+# `diff-highlight` script, but it's not executable, you may need to `chmod +x
+# $DIFFHIGHLIGHT_PATH/diff-highlight`.
+#
+DIFFHIGHLIGHT_PATH="/usr/share/doc/git/contrib/diff-highlight"
+PATH="${DIFFHIGHLIGHT_PATH}:${PATH}"
