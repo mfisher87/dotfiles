@@ -25,6 +25,11 @@ alias fixsshagent='eval $(tmux showenv -s SSH_AUTH_SOCK)'  # What was this for?
 
 alias nginxcontainer='docker run --rm -p 80:80 -v ${PWD}:/var/lib/nginx/html:ro dceoy/nginx-autoindex'
 
+# Activate a Conda environment named after root directory name of the current
+# Git project. Of course, only works if you have named your envs to match your
+# project names (and keep the repo in a directory named after the project)!
+alias ca='conda activate $(basename $(git root))'
+
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
