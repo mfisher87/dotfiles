@@ -51,3 +51,7 @@ alias brown='play -n -n --combine merge synth brownnoise band -n 550 550 tremolo
 # Rsync with vagrant identity
 alias vrsync='rsync -e "ssh -i $HOME/.ssh/id_rsa_vagrant_vsphere"'
 alias vssh='ssh -i $HOME/.ssh/id_rsa_vagrant_vsphere'
+
+
+# Quarto
+alias qp='quarto preview --port 7777'
