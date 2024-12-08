@@ -1,0 +1,3 @@
+matches:
+  - trigger: ";dse"
+    replace: "Schmidt Center for Data Science and Environment"
