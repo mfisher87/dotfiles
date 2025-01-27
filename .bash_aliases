@@ -30,6 +30,8 @@ alias nginxcontainer='docker run --rm -p 80:80 -v ${PWD}:/var/lib/nginx/html:ro 
 # project names (and keep the repo in a directory named after the project)!
 alias ca='conda activate $(basename $(git root))'
 
+alias mm='micromamba'
+
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
