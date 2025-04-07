@@ -58,7 +58,8 @@
   #   * `--all` MUST be after `--exclude`s.
   lolac = "log --decorate --graph --oneline --exclude=refs/*/gh-pages --exclude=refs/*/md-outputs* --all"
 
-
+  # Print out unique authors for the current repo in git-mob config format
+  mob-authors = !git log --format='{\"name\": \"%an\", \"email\": \"%ae\"},' | sort -u
 
 # Command-specific settings:
 [init]
