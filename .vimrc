@@ -77,6 +77,8 @@ Plug 'nathanaelkane/vim-indent-guides'
 " Quarto syntax
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'quarto-dev/quarto-vim'
+" Manipulate surrounding characters (braces, brackets, parens, quotes)
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
