@@ -23,7 +23,7 @@ alias dotfiles="/usr/bin/git --git-dir=${HOME}/.dotfiles --work-tree=${HOME}"
 alias sshp='ssh -o PreferredAuthentications=password,keyboard-interactive -o PubkeyAuthentication=no'
 alias fixsshagent='eval $(tmux showenv -s SSH_AUTH_SOCK)'  # What was this for?
 
-alias nginxcontainer='docker run --rm -p 80:80 -v ${PWD}:/var/lib/nginx/html:ro dceoy/nginx-autoindex'
+alias nginxcontainer='docker run --rm -p 80:80 -v ${PWD}:/usr/share/nginx/html:ro ghcr.io/mfisher87/nginx-quickdev'
 
 # Activate a Conda environment named after root directory name of the current
 # Git project. Of course, only works if you have named your envs to match your
