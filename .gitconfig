@@ -1,21 +1,21 @@
 [user]
-  email = mfisher87@gmail.com
-  name = Matt Fisher
-  signingkey = ~/.ssh/id_ed25519.pub
+  email = "mfisher87@gmail.com"
+  name = "Matt Fisher"
+  signingkey = "~/.ssh/id_ed25519.pub"
 
 [gpg]
-  format = ssh
+  format = "ssh"
 
 [core]
-  editor = vim
+  editor = "vim"
   # IMPORTANT: `diff-highlight` requires $PATH setup, which I have done in
   # ~/.bash_path. Further notes are available there, as this can differ from
   # system to system. In the worst case, comment the line below.
   # pager = "diff-highlight | less"
 
-  autocrlf = input
-  whitespace = cr-at-eol
-  excludesfile = ~/.gitignore_global
+  autocrlf = "input"
+  whitespace = "cr-at-eol"
+  excludesfile = "~/.gitignore_global"
 
 [interactive]
   # IMPORTANT: `diff-highlight` requires $PATH setup, which I have done in
@@ -76,17 +76,17 @@
 
 # Command-specific settings:
 [init]
-  defaultBranch = main
+  defaultBranch = "main"
 
 [merge]
-  conflictstyle = merge
+  conflictstyle = "merge"
 
 [push]
-  default = simple
+  default = "simple"
 
 [pull]
   rebase = false
-  ff = only
+  ff = "only"
 
 [commit]
   verbose = true
