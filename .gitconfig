@@ -39,14 +39,24 @@
   puhs = "push"
 
   ## Convenience:
+  d = "diff"
   ds = "diff --staged"
+
+  c = "commit"
   cv = "commit --verbose"
+
   po = "push --set-upstream origin"
   pob = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
   pb = "pob"
 
+  f = "fetch"
   fm = "fetch origin main:main"
+
+  s = "switch"
   sm = "switch main"
+  nb = "switch -c"
+
+  wt = "worktree"
 
   # "Log list": shows tree format
   lol = "log --graph --decorate --oneline"
