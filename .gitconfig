@@ -68,6 +68,12 @@
   #   * `--all` MUST be after `--exclude`s.
   lolac = "log --decorate --graph --oneline --exclude=refs/*/gh-pages --exclude=refs/*/md-outputs* --all"
 
+  ## Conflict resolution helpers from https://archive.kernel.org/oldwiki/git.wiki.kernel.org/index.php/Aliases.html
+  # Edit conflicted files
+  edit-unmerged = "!f() { git diff --name-status --diff-filter=U | cut -f2 ; }; vim -p `f`"
+  # Add conflicted files
+  add-unmerged = "!f() { git diff --name-status --diff-filter=U | cut -f2 ; }; git add `f`"
+
   # Print out unique authors for the current repo in git-mob CLI format: `git add-coauthor $1 $2`
   mob-authors = !git log --format='\"%an\" \"%ae\"' | sort -u
   # Print out mob-authors in git-mob JSON config format
