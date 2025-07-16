@@ -54,6 +54,7 @@
 
   s = "switch"
   sm = "switch main"
+  sd = "switch --detach"
   nb = "switch -c"
 
   wt = "worktree"
